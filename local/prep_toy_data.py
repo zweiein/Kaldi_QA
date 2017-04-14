@@ -113,8 +113,11 @@ if __name__ == '__main__':
         for  i, utt_id in enumerate(utt_id_list) :
             ## Generate feats.scp, 
             ## CAUTION!!!! 記得最後要加上特徵開始的位置(例如你的utt_id長度是5, 那你的feats.scp裡面其中一行 XXXXX path-to-ark:6), 不然會有錯
-            this_utt_ark_path = output_dir + "/feats/{}_feats.ark:{}".format(utt_id, len(utt_id)+1)
+            this_utt_ark_path = output_dir + "/feats/{}_feats.ark:{}".format(utt_id, len(utt_id)+1)            
             fp_scp.write("{} {}\n".format(utt_id, this_utt_ark_path))
+            
+            ## 只有feats.scp需要ark:6, 存檔的時候不用
+            this_utt_ark_path = output_dir + "/feats/{}_feats.ark".format(utt_id)
             
             ## --------------------
             # ## (1) Generate feats.ark, ark files are text format:

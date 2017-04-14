@@ -1,6 +1,20 @@
 # -*- coding: utf-8 -*-
+
+"""
+
+Required
+--------
+* python 3
+
+
+Goal
+--------
+* Generates pseudo corpus which contains features, feats.scp, text, wav.scp
+"""
    
 import numpy as np
+np.random.seed(9487)
+ 
 import sys
 import os
 import numpy

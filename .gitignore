@@ -23,3 +23,5 @@ trans.*
 *.si
 data*
 exp_*
+exp*
+exp/*
